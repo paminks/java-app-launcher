@@ -19,6 +19,7 @@ public class Executables implements Jsonable {
     {
         this.path = path;
     }
+    //writes path to json file. yeah writing every directory to seperate json files is not efficient but its easier to debug imo 
     @Override
     public String toJson() {
         JsonObject json  = new JsonObject();
