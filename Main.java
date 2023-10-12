@@ -36,10 +36,9 @@ public class Main  {
                 setJson();
                 break;
             case(2):
+                //change this to your project directory, mine is this. yeah java code in kotlinTry folder. dont question me. 
                 File folder = new File("/home/eren/Desktop/kotlinTry/hubApp1");
                 getJson(folder,"json");
-
-
                 break;
 
         }
@@ -57,6 +56,7 @@ public class Main  {
             ex.printStackTrace();
         }
     }
+    //😃
     public static String yesNo;
     public static void getJson(File folder, String filterText)
     {
@@ -79,7 +79,7 @@ public class Main  {
                         if(file.isFile())
                         {
                             String filename = file.getName();
-                            if(filename.endsWith(".x86_64"))
+                            if(filename.endsWith(".x86_64")//add an OR statement to here if you want to execute other executable formats)
                             {
                                 System.out.println("Would you like to execute " + filename);
                                 yesNo = scanner.next();
@@ -96,8 +96,6 @@ public class Main  {
                     }
                 }
 
-
-
                 reader.close();
 
             }
@@ -108,7 +106,8 @@ public class Main  {
         }
     }
 
-
+    //write a new void if you want to execute other executables like .sh or .exe 
+    //This executes all of them but seperating them is always good for error handling
     private static void executeX86_64Binary(String filePath) {
         try {
             Process process = new ProcessBuilder(filePath).start();
@@ -117,6 +116,7 @@ public class Main  {
             e.printStackTrace();
         }
     }
+    //this is completely unnecessary but yeah
     public static class MyExtFilter implements FilenameFilter {
 
         public String ext;
