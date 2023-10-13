@@ -81,7 +81,7 @@ public class Main  {
                             String filename = file.getName();
                             if(filename.endsWith(".x86_64")//add an OR statement to here if you want to execute other executable formats)
                             {
-                                System.out.println("Would you like to execute " + filename);
+                                System.out.println("Would you like to execute [y/n] " + filename);
                                 yesNo = scanner.next();
                                 switch(yesNo)
                                 {
